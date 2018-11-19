@@ -1,0 +1,37 @@
+{
+    "name": "flexvision/servisco2018wp",
+    "description": "site web 2018 de servisco en wordpress",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Zenike",
+            "email": "nicolasmaquet@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "flexvision/acf-pro",
+                "version": "master",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9MTMwNjEyfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOC0wNS0wNCAxMjoxODo1OQ=="
+                }
+            }
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+		"flexvision/acf-pro":"dev-master",
+        "wpackagist-plugin/contact-form-7":"*",
+        "wpackagist-plugin/cookie-law-info":"*",
+        "wpackagist-plugin/disable-comments":"*",
+        "wpackagist-plugin/wp-migrate-db": "*"
+    }
+}
