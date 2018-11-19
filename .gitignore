@@ -13,6 +13,7 @@ wp-content/plugins/
 wp-content/languages/plugins/
 
 vendor/
+node_modules/
 
 /.htaccess
 /license.txt
