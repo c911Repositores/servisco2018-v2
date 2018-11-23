@@ -37,6 +37,18 @@
 	<?php get_template_part('svg/svgdrone'); ?>
 </div>
 
+<div style="width:200px">
+	<?php get_template_part('svg/svgsignboard'); ?>
+</div>
+
+<div style="width:200px">
+	<?php get_template_part('svg/svgmatterport'); ?>
+</div>
+
+<div style="width:200px;">
+	<?php get_template_part('svg/svgmeters'); ?>
+</div>
+
 <br>
 <br>
 <br>

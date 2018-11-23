@@ -216,6 +216,7 @@ fill: red;
 	animation: svgvirtualtour__arrow 4s infinite ease-in-out;
 	}
 }
+
 //////////////////////////////////////////////////////////////////////////////////////
 
 @keyframes svgdrone__screwleft {
@@ -262,5 +263,99 @@ fill: red;
 	}
 	.svgdrone__screwleft {
 	animation: svgdrone__screwleft 0.2s infinite linear;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+@keyframes svgsignboard__icon {
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+	}
+}
+.svgsignboard {
+fill: red;
+	.svgsignboard__body {
+
+	}
+	.svgsignboard__icon {
+	transform-origin: 50% 50%;
+	animation: svgsignboard__icon 4s infinite alternate ease-in-out;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+@keyframes svgmatterport__left {
+	0% {
+	transform: translate(-15%,0);
+	}
+	10% {
+	transform: translate(0%,0);
+	}
+	12% {
+	transform: translate(-5%,0);
+	}
+	14% {
+	transform: translate(0%,0);
+	}
+	90% {
+	transform: translate(0%,0);
+	}
+	100% {
+	transform: translate(-15%,0);
+	}
+}
+@keyframes svgmatterport__right {
+	0% {
+	transform: translate(15%,0);
+	}
+	10% {
+	transform: translate(0%,0);
+	}
+	12% {
+	transform: translate(5%,0);
+	}
+	14% {
+	transform: translate(0%,0);
+	}
+	90% {
+	transform: translate(0%,0);
+	}
+	100% {
+	transform: translate(15%,0);
+	}
+}
+.svgmatterport {
+fill: red;
+	.svgmatterport__left {
+	animation: svgmatterport__left 2s infinite linear;
+	}
+	.svgmatterport__right {
+	animation: svgmatterport__right 2s infinite linear;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+@keyframes svgmeters__body {
+	0% {transform: translate(0%,0) rotate(0deg);}
+
+	10% {transform: translate(30%,-5%) rotate(135deg);}
+	30% {transform: translate(30%,-5%) rotate(135deg);}
+
+	40% {transform: translate(0%,30%) rotate(45deg);}
+	60% {transform: translate(0%,30%) rotate(45deg);}
+
+	70% {transform: translate(0%,0) rotate(0deg);}
+}
+.svgmeters {
+fill: red;
+	.svgmeters__body {
+	animation: svgmeters__body 3s infinite;
+	transform-origin: center;
 	}
 }
