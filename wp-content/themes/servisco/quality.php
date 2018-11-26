@@ -55,7 +55,12 @@
 				<?php echo $number_of_service; ?>
 			</h1>
 
-			<?php the_field('icone_dillustration'); ?>
+			<div style="width:100px">
+				<?php
+				$icon_name = get_field('icone_dillustration');
+				get_template_part('svg/' . $icon_name);
+				?>
+			</div>
 
 			<h2>
 				<?php the_title(); ?>

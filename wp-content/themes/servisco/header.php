@@ -6,30 +6,34 @@
 		<title><?php echo get_bloginfo('name'); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900" rel="stylesheet">
 
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 
-		<button>
-			<i class="fas fa-bars"></i>
-		</button>
+		<div class="header-spacer"></div>
 
-		<ul>
-			<?php wp_nav_menu(array('menu' => 'Menu principal', 'items_wrap' => '%3$s', 'container' => false)); ?>
-		</ul>
+		<header class="header">
+			<div class="header__logo">
+				<a href="<?php echo get_page_link(9); ?>">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-servisco.svg" alt="SERVISCO REALTY PARTNER OF TOMORROW">
+				</a>
+			</div>
+			<div class="header__agencylink">
+				<?php get_template_part('inc/agency-contact-button'); ?>
+			</div>
+			<nav class="header__navbar">
+				<button class="header__button">
+					<span class="header__buttonbar-1"></span>
+					<span class="header__buttonbar-2"></span>
+					<span class="header__buttonbar-3"></span>
+					<span class="header__buttonbar-4"></span>
+				</button>
+				<ul class="header__navbarlist">
+					<?php wp_nav_menu(array('menu' => 'Menu principal', 'items_wrap' => '%3$s', 'container' => false)); ?>
+				</ul>
+			</nav>
+		</header>
 
-		<ul>
-			<?php get_template_part('inc/social-links'); ?>
-		</ul>
-
-		<a href="">
-			Je suis une agence
-		</a>
 		
-		<br>
-		<br>
-
-		<div style="background:black;width:200px;">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-servisco.svg" alt="SERVISCO REALTY PARTNER OF TOMORROW">
-		</div>
