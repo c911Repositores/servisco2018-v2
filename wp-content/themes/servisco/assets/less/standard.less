@@ -12,6 +12,32 @@ font-weight: 300;
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+.autosize-m {
+max-width: 1000px;
+width: 96%;
+margin-left: auto;
+margin-right: auto;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+.ctitle {
+text-align: center;
+font-size: 21px;
+line-height: 1em;
+font-weight: 300;
+color: @theme;
+	strong {
+	font-weight: bold;
+	font-size: 1.5em;
+	}
+@media all and (max-width:700px) {
+font-size: 18px;
+}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 .cbutton {
 font-size: 18px;
 background-color: @theme;
@@ -38,6 +64,45 @@ text-align: center;
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+.mg15 {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.mgt15 {margin-top: 15px;}
+.mgb15 {margin-bottom: 15px;}
+.mg30 {
+margin-top: 30px;
+margin-bottom: 30px;
+}
+.mgt30 {margin-top: 30px;}
+.mgb30 {margin-bottom: 30px;}
+.mg45 {
+margin-top: 45px;
+margin-bottom: 45px;
+}
+.mgt45 {margin-top: 45px;}
+.mgb45 {margin-bottom: 45px;}
+.mg60 {
+margin-top: 60px;
+margin-bottom: 60px;
+}
+.mgt60 {margin-top: 60px;}
+.mgb60 {margin-bottom: 60px;}
+.mg90 {
+margin-top: 90px;
+margin-bottom: 90px;
+}
+.mgt90 {margin-top: 90px;}
+.mgb90 {margin-bottom: 90px;}
+.mg120 {
+margin-top: 120px;
+margin-bottom: 120px;
+}
+.mgt120 {margin-top: 120px;}
+.mgb120 {margin-bottom: 120px;}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 @keyframes scrollsignal {
 	from {transform: translate(0,-10px);}
 	to {transform: translate(0,10px);}
@@ -46,6 +111,7 @@ text-align: center;
 .scrollsignal {
 position: relative;
 z-index: 5;
+margin-bottom: 90px;
 	.scrollsignal__arrow {
 	width: 50px;
 	background-color: #fff;
@@ -63,6 +129,7 @@ z-index: 5;
 	border: none;
 	outline: none;
 	animation: scrollsignal 2s ease-out infinite;
+	display: none;
 		&:hover {
 		background-color: #eee;
 		}
@@ -75,6 +142,7 @@ z-index: 5;
 	position: absolute;
 	left: 50%;
 	bottom: 60px + 15px + 50px + 15px;
+	display: none;
 	}
 	.scrollsignal__bottombar {
 	width: 2px;
@@ -84,6 +152,18 @@ z-index: 5;
 	position: absolute;
 	left: 50%;
 	bottom: -60px;
+	}
+@media all and (max-width:@size_header_mobile) {
+display: none;
+}
+}
+
+body.home .scrollsignal {
+	.scrollsignal__arrow {
+	display: block;
+	}
+	.scrollsignal__topbar {
+	display: block;
 	}
 }
 

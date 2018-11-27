@@ -1,5 +1,6 @@
 
 @size_header_mobile: 1000px;
+@size_header_smallestheader: 700px;
 
 .header-spacer {
 height: 150px;
@@ -52,17 +53,22 @@ z-index: 100;
 		//css à part juste en dessous
 		}
 	}
+// greater than mediaquery (inversed)
+@media all and (min-width:@size_header_smallestheader) {
 	&.header--scrolled {
 	height: 100px;
 	}
+}
+// lower than mediaquery
 @media all and (max-width:@size_header_mobile){
 padding-left: 30px;
 z-index: 500;
 }
-@media all and (max-width:700px){
+@media all and (max-width:@size_header_smallestheader){
 padding-left: 15px;
 display: block;
 height: 60px;
+background-color: @theme !important;
 	.header__navbar {
 	position: absolute;
 	top: 18px;
@@ -272,11 +278,13 @@ outline: none;
 }
 }
 
+// greater than mediaquery (inversed)
+@media all and (min-width:@size_header_smallestheader) {
 body.home .header:not(.header--scrolled) .header__button {
-background: none;
 	.header__buttonbar-1, .header__buttonbar-2, .header__buttonbar-3, .header__buttonbar-4 {
 	background-color: @theme;
 	}
+}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -284,11 +292,12 @@ background: none;
 .homebanner {
 height: 100vh;
 display: flex;
+font-size: 10px;
 	.homebanner__content {
 	background-color: @theme;
 	flex-basis: 40%;
-	padding-left: 45px;
-	padding-right: 45px;
+	padding-left: 5em;
+	padding-right: 5em;
 	padding-top: 150px;
 	}
 	.homebanner__picturezone {
@@ -319,16 +328,15 @@ display: flex;
 	margin-top: 15px;
 	}
 	.homebanner__title {
-	font-size: 45px;
+	font-size: 4.5em;
 	color: #fff;
 	font-weight: 300;
-	margin: 60px 0;
+	margin: 1.2em 0;
 		strong {
 		font-weight: 600;
 		}
 	}
 	.homebanner__text {
-	margin: 60px 0;
 	font-size: 19px;
 	color: #fff;
 		strong {
@@ -336,6 +344,137 @@ display: flex;
 		}
 	}
 	.homebanner__link {
-	margin: 60px 0;
+	margin: 6em 0;
 	}
+@media all and (max-width:1500px) {
+font-size: 8px;
+}
+@media all and (max-width:1300px) {
+font-size: 7px;
+}
+@media all and (max-width:@size_header_mobile) {
+display: block;
+height: auto;
+	.homebanner__content {
+	padding-bottom: 1px;
+	}
+	.homebanner__picturezone {
+	padding: 0;
+	height: 100vw;
+	max-height: 500px;
+	padding: 3vw;
+	}
+}
+@media all and (max-width:@size_header_smallestheader) {
+font-size: 6px;
+	.homebanner__content {
+	padding-top: 60px;
+	}
+}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+@packsgroups_head_height: 130px;
+
+.packsgroups {
+display: flex;
+	.packsgroups__column {
+	flex-basis: 50%;
+	flex-shrink: 0;
+	text-align: center;
+	position: relative;
+	padding: 0 90px;
+	}
+	.packsgroups__head {
+	position: relative;
+	min-height: @packsgroups_head_height;
+	padding-bottom: 30px;
+		&::before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 45%;
+		width: 10%;
+		height: 2px;
+		background-color: @skyblue;
+		}
+	}
+	.packsgroups__title {
+	font-size: 21px;
+	font-weight: bold;
+	color: @theme;
+	margin: 0;
+	margin-bottom: 15px;
+	}
+	.packsgroups__text {
+	font-size: 20px;
+	font-weight: 300;
+	color: @theme;
+	}
+	.packsgroups__list {
+	list-style-type: none;
+	padding: 0;
+	margin: 45px 0;
+	}
+	.packsgroups__service {
+	font-size: 14px;
+	font-weight: bold;
+	color: @theme;
+	margin: 30px 0;
+		a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+		position: relative;
+		padding: 5px 35px 0 35px;
+		}
+		svg {
+		width: 25px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		fill: @theme;
+		}
+		a:hover {
+		color: @skyblue;
+			svg {
+			fill: @skyblue;
+			}
+		}
+	}
+	.packsgroups__link {
+	margin: 45px 0;
+	}
+// greater than mediaquery (inversed)
+@media all and (min-width:550px) {
+	.packsgroups__column:first-child {
+	padding-left: 0px;
+	}
+	.packsgroups__column:last-child {
+	padding-right: 0px;
+		&::before {
+		content: ' ';
+		position: absolute;
+		top: @packsgroups_head_height;
+		left: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: @theme;
+		}
+	}
+}
+// lower than mediaquery
+@media all and (max-width:1000px) {
+	.packsgroups__column {
+	padding: 0 10vw;
+	}
+}
+@media all and (max-width:550px) {
+display: block;
+	.packsgroups__column {
+	padding: 0 7vw;
+	}
+}
 }
