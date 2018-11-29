@@ -111,14 +111,89 @@
 </section>
 
 <h2 class="ctitle mg90 autosize-m">
-	<?php the_field('agent_mushthave_title'); ?>
+	<?php the_field('services_title'); ?>
 </h2>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<section class="starservices">
+	<ul class="starservices__list">
+		<?php $args = array(
+			'post_type' => 'services',
+			'cat' => 4
+		); ?>
+		<?php $loop = new WP_Query($args); ?>
+		<?php while($loop->have_posts()) : $loop->the_post(); ?>
+
+			<li class="starservices__item">
+				<div class="starservices__icon">
+					<?php
+					$icon_name = get_field('icone_dillustration');
+					get_template_part('svg/animated-' . $icon_name);
+					?>
+				</div>
+				<h3 class="starservices__title">
+					<?php the_title(); ?>
+				</h3>
+				<div class="starservices__text">
+					<?php the_field('text_short'); ?>
+				</div>
+			</li>
+
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+	</ul>
+</section>
+
+<div class="cbutton-ctn mg60 autosize-m">
+	<a href="<?php echo get_page_link(11) . '&option=basic_pack'; ?>" class="cbutton">
+		<?php the_field('services_link_text_button'); ?>
+	</a>
+</div>
+
+<span class="verticalseparator"></span>
+
+<h2 class="ctitle mg90 autosize-m">
+	<?php the_field('partners_title'); ?>
+</h2>
+
+<div class="cbutton-ctn mg60 autosize-m">
+	<div class="cbutton-ctn__decobox">
+		<div class="funarrow">
+			<div class="funarrow__arrow">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow-1.svg">
+			</div>
+			<div class="funarrow__text">
+				<?php the_field('fun_arrow_text_partners'); ?>
+			</div>
+		</div>
+	</div>
+	<a href="<?php echo get_page_link(11) . '&option=basic_pack'; ?>" class="cbutton">
+		<?php the_field('partners_link_text_button'); ?>
+	</a>
+</div>
+
+<span class="verticalseparator"></span>
+
+<section class="datanumbers autosize">
+	<?php if(have_rows('numbers_list')) : ?>
+		<ul id="js-banner-numbers" class="datanumbers__list">
+			<?php while (have_rows('numbers_list')) : the_row(); ?>
+				<li class="datanumbers__item">
+					<div class="datanumbers__icon">
+						<?php
+						$icon_name = get_sub_field('icon');
+						get_template_part('svg/icon-' . $icon_name);
+						?>
+					</div>
+					<div class="datanumbers__title">
+						<?php the_sub_field('title'); ?>
+					</div>
+					<div class="datanumbers__number" data-js-autoincrement="<?php the_sub_field('number'); ?>">
+
+					</div>
+				</li>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+</section>
 
 <?php get_footer(); ?>

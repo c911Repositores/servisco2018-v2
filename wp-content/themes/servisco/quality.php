@@ -58,7 +58,7 @@
 			<div style="width:100px">
 				<?php
 				$icon_name = get_field('icone_dillustration');
-				get_template_part('svg/' . $icon_name);
+				get_template_part('svg/animated-' . $icon_name);
 				?>
 			</div>
 

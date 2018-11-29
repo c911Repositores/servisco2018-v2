@@ -72,5 +72,47 @@ $(document).ready(function() {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////////
+// AUTO INCREMENTATION DES CHIFFRES (HOME)
+////////////////////////////////////////////////////////////////////////////////////
+function fireNumbersIncrement() {
+	$("[data-js-autoincrement]").each(function(){
+		var target = $(this);
+		var value = $(this).attr("data-js-autoincrement");
+
+		$({percentage: 0}).stop(true).animate({percentage: value}, {
+			duration : 4000,
+			easing: "easeOutExpo",
+			step: function () {
+				var percentageVal = Math.round(this.percentage);
+				target.text(percentageVal);
+			}
+		}).promise().done(function () {
+			// hard set the value after animation is done to be
+			// sure the value is correct
+			target.text(value);
+		});
+	});
+}
+
+$(document).ready(function() {
+	if($('#js-banner-numbers').length == 1){
+
+		var numbersIncrementIsStarted = false;
+
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			var targetPos = $("#js-banner-numbers").position().top;
+			var screenh = $(window).height();
+
+			if(scroll + screenh/2 >= targetPos && numbersIncrementIsStarted == false) {
+				numbersIncrementIsStarted = true;
+				fireNumbersIncrement();
+			}
+		});
+	}
+});
+
+
 // END AUTOINVOKED FUNCTION //////////////////////////////////////////////////////////////
 })(jQuery);
