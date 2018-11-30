@@ -530,6 +530,14 @@ display: block;
 	font-weight: normal;
 	color: @theme;
 	}
+@media all and (max-width:700px) {
+	.starservices__list {
+	display: block;
+	}
+	.starservices__item {
+	margin-top: 0;
+	}
+}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -597,4 +605,77 @@ margin-bottom: 60px;
 		}
 	}
 }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+.footer {
+background-color: @theme;
+margin-top: 150px;
+	.footer__logo {
+	width: 160px;
+	margin: auto;
+	margin-top: 60px;
+		a {
+		display: block;
+		}
+		img {
+		display: block;
+		width: 100%;
+		}
+	}
+	.footer__social {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+		li {
+		display: inline-block;
+		}
+		a {
+		color: #fff;
+		font-size: 24px;
+		}
+		a:hover {
+		color: @skyblue;
+		}
+	}
+	.footer__navbar {
+	margin: 60px 0;
+	}
+	.footer__navbarlist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+		li {
+		display: inline-block;
+		}
+		a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding: 5px 15px;
+		}
+		a:hover {
+		text-decoration: underline;
+		}
+	}
+	.footer__mentions {
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+		a {
+		color: #fff;
+		text-decoration: none;
+		}
+		a:hover {
+		text-decoration: underline;
+		}
+	}
 }

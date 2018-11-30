@@ -177,6 +177,11 @@ margin-bottom: 120px;
 	to {transform: translate(0,10px);}
 }
 
+@keyframes scrollsignal_goup {
+	from {transform: translate(0,10px) rotate(180deg);}
+	to {transform: translate(0,-10px) rotate(180deg);}
+}
+
 .scrollsignal {
 position: relative;
 z-index: 5;
@@ -233,6 +238,27 @@ body.home .scrollsignal {
 	}
 	.scrollsignal__topbar {
 	display: block;
+	}
+}
+
+.footer .scrollsignal {
+display: block !important;
+height: 30px + 15px + 50px + 15px;
+margin-bottom: 0;
+	.scrollsignal__topbar {
+	display: block;
+	height: 60px;
+	bottom: 30px + 15px + 50px + 15px + 15px;
+	}
+	.scrollsignal__bottombar {
+	height: 30px;
+	bottom: 0;
+	background-color: #fff;
+	}
+	.scrollsignal__arrow {
+	display: block;
+	bottom: 30px + 15px;
+	animation-name: scrollsignal_goup;
 	}
 }
 

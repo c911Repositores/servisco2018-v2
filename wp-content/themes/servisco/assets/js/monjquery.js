@@ -61,8 +61,16 @@ $(document).ready(function() {
 // SCROLL SIGNAL go down if clicked
 ////////////////////////////////////////////////////////////////////////////////////
 function scrollsignal_move() {
-	var height = $(window).height();
-	$('html,body').animate({scrollTop: height}, 1000);
+
+	var actualScroll = $(window).scrollTop();
+
+	if(actualScroll > $(window).height()) {
+		var targetPosition = 0;
+	} else {
+		var targetPosition = $(window).height();
+	}
+
+	$('html,body').animate({scrollTop: targetPosition}, 1000);
 }
 
 $(document).ready(function() {
@@ -81,8 +89,8 @@ function fireNumbersIncrement() {
 		var value = $(this).attr("data-js-autoincrement");
 
 		$({percentage: 0}).stop(true).animate({percentage: value}, {
-			duration : 4000,
-			easing: "easeOutExpo",
+			duration : 2000,
+			// easing: "easeOutExpo",
 			step: function () {
 				var percentageVal = Math.round(this.percentage);
 				target.text(percentageVal);
@@ -105,7 +113,7 @@ $(document).ready(function() {
 			var targetPos = $("#js-banner-numbers").position().top;
 			var screenh = $(window).height();
 
-			if(scroll + screenh/2 >= targetPos && numbersIncrementIsStarted == false) {
+			if(scroll + screenh/4*3 >= targetPos && numbersIncrementIsStarted == false) {
 				numbersIncrementIsStarted = true;
 				fireNumbersIncrement();
 			}

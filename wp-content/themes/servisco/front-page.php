@@ -188,7 +188,7 @@
 						<?php the_sub_field('title'); ?>
 					</div>
 					<div class="datanumbers__number" data-js-autoincrement="<?php the_sub_field('number'); ?>">
-
+						0
 					</div>
 				</li>
 			<?php endwhile; ?>
