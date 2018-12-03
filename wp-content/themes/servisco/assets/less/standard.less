@@ -45,7 +45,7 @@ font-size: 18px;
 //////////////////////////////////////////////////////////////////////////////////////
 
 .verticalseparator {
-height: 150px;
+height: 120px;
 position: relative;
 display: block;
 margin: 90px 0;
@@ -59,6 +59,10 @@ margin: 90px 0;
 	left: 50%;
 	width: 2px;
 	}
+@media all and (max-width:500px) {
+margin: 60px 0;
+height: 90px;
+}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -172,6 +176,77 @@ margin-bottom: 120px;
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+.cbanner {
+padding: 90px 5%;
+background-position: center;
+background-size: cover;
+color: #fff;
+font-size: 10px;
+text-align: center;
+position: relative;
+margin-bottom: 120px;
+	.cbanner__title {
+	font-size: 4.5em;
+	font-weight: 300;
+	margin: 0;
+		p {
+		margin: 0;
+		}
+		strong {
+		font-weight: bold;
+		}
+	}
+	.cbanner__social {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 30px;
+		li {
+		display: inline-block;
+		font-size: 24px;
+		margin: 0 2px;
+		}
+		a {
+		color: inherit;
+		}
+		a:hover {
+		color: @skyblue;
+		}
+	}
+	&::before, &::after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	height: 45px;
+	width: 2px;
+	background-color: @theme;
+	bottom: -45px;
+	left: 50%;
+	}
+	&::before {
+	background-color: #fff;
+	bottom: 0;
+	}
+@media all and (max-width:900px) {
+font-size: 8px;
+}
+@media all and (max-width:700px) {
+font-size: 7px;
+}
+}
+
+.cbanner--quality {
+background-image: url(../img/bg/objectif-photo-1920.jpg);
+@media all and (max-width:1366px) {
+background-image: url(../img/bg/objectif-photo-1366.jpg);
+}
+@media all and (max-width:768px) {
+background-image: url(../img/bg/objectif-photo-768.jpg);
+}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 @keyframes scrollsignal {
 	from {transform: translate(0,-10px);}
 	to {transform: translate(0,10px);}
@@ -203,7 +278,6 @@ margin-bottom: 90px;
 	border: none;
 	outline: none;
 	animation: scrollsignal 2s ease-out infinite;
-	display: none;
 		&:hover {
 		background-color: #eee;
 		}
@@ -216,7 +290,6 @@ margin-bottom: 90px;
 	position: absolute;
 	left: 50%;
 	bottom: 60px + 15px + 50px + 15px;
-	display: none;
 	}
 	.scrollsignal__bottombar {
 	width: 2px;
@@ -230,15 +303,6 @@ margin-bottom: 90px;
 @media all and (max-width:@size_header_mobile) {
 display: none;
 }
-}
-
-body.home .scrollsignal {
-	.scrollsignal__arrow {
-	display: block;
-	}
-	.scrollsignal__topbar {
-	display: block;
-	}
 }
 
 .footer .scrollsignal {

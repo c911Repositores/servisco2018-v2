@@ -88,7 +88,7 @@
 				<ul class="packsgroups__list">
 					<?php while ($loop->have_posts() ) : $loop->the_post(); ?>
 						<li class="packsgroups__service">
-							<a href="<?php echo get_page_link(11) . '?option=' . $option_nbr; ?>">
+							<a href="<?php echo get_page_link(11) . '#service' . $option_nbr; ?>">
 								<?php get_template_part('svg/icon-check'); ?>
 								<?php the_title(); ?>
 							</a>
