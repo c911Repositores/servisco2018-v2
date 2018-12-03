@@ -36,6 +36,7 @@ color: @theme;
 	strong {
 	font-weight: bold;
 	font-size: 1.5em;
+	line-height: 1.1em;
 	}
 @media all and (max-width:700px) {
 font-size: 18px;
@@ -63,6 +64,15 @@ margin: 90px 0;
 margin: 60px 0;
 height: 90px;
 }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+.bluetext {
+font-size: 35px;
+font-weight: bold;
+color: @skyblue;
+text-align: center;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -235,6 +245,13 @@ font-size: 7px;
 }
 }
 
+.cbanner--darktext {
+color: @theme;
+	&::before {
+	background-color: @theme;
+	}
+}
+
 .cbanner--quality {
 background-image: url(../img/bg/objectif-photo-1920.jpg);
 @media all and (max-width:1366px) {
@@ -242,6 +259,16 @@ background-image: url(../img/bg/objectif-photo-1366.jpg);
 }
 @media all and (max-width:768px) {
 background-image: url(../img/bg/objectif-photo-768.jpg);
+}
+}
+
+.cbanner--partners {
+background-image: url(../img/bg/keys-on-table-1920.jpg);
+@media all and (max-width:1366px) {
+background-image: url(../img/bg/keys-on-table-1366.jpg);
+}
+@media all and (max-width:768px) {
+background-image: url(../img/bg/keys-on-table-768.jpg);
 }
 }
 
