@@ -4,7 +4,7 @@
 <div class="partnerpost">
 	<nav class="partnerpost__back autosize-m">
 		<a href="<?php echo get_page_link(13); ?>">
-			<i class="fas fa-chevron-left"></i> Revenir aux partenaires
+			<i class="fas fa-chevron-left"></i> Liste des partenaires
 		</a>
 	</nav>
 	<div class="partnerpost__logo">

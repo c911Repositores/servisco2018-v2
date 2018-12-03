@@ -155,6 +155,30 @@
 	<?php the_field('partners_title'); ?>
 </h2>
 
+<div class="partners autosize-m">
+	<ul class="partners__list">
+		<?php $args = array('post_type' => 'partners'); ?>
+		<?php $loop = new WP_Query($args); ?>
+		<?php while($loop->have_posts()) : $loop->the_post(); ?>
+			<li class="partners__item">
+				<a class="partners__link" href="<?php the_permalink(); ?>">
+					<?php
+					$image = get_field('logo');
+					$size = 'medium'; //thumbnail, medium, large, full, array('700', '600')
+					if($image) {
+						echo wp_get_attachment_image($image, $size);
+					}
+					?>
+					<span class="partners__more">
+						En savoir plus
+					</span>
+				</a>
+			</li>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+	</ul>
+</div>
+
 <div class="cbutton-ctn mg60 autosize-m">
 	<div class="cbutton-ctn__decobox">
 		<div class="funarrow">
