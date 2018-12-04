@@ -78,3 +78,66 @@ function remove_footer_admin ()
 	echo '<span id="footer-thankyou">Developed by <a href="http://www.flexvision.be" target="_blank">Flexvision</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+///// Customize login page
+//////////////////////////////////////////////////////////////////////////////////////
+function my_login_logo_url() {
+	return "http://www.servisco.be";
+}
+add_filter('login_headerurl', 'my_login_logo_url');
+
+function my_login_logo_url_title() {
+	return 'Your Site Name and Info';
+}
+add_filter('login_headertitle', 'my_login_logo_url_title');
+
+function my_login_stylesheet() {
+	?>
+	<style type='text/css'>
+		body.login {
+		background-color: #21364F;
+		}
+
+		/* logo */
+		.login #login h1 a {
+		background-image: url(<?php echo get_bloginfo('template_directory'); ?>/assets/img/logo-servisco.svg);
+		-webkit-background-size: contain;
+		background-size: contain;
+		width: auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		}
+
+		/* border-left of error messages */
+		.login #login #login_error, .login #login .message, .login #login .success {
+		border-color: #fff;
+		}
+
+		/* button */
+		.wp-core-ui #login .button-primary {
+		background-color: #21364F;
+		border-color: #21364F;
+		box-shadow: none;
+		text-shadow: none;
+		}
+		.wp-core-ui #login .button-primary:hover {
+		background-color: #009EE2;
+		border-color: #009EE2;
+		}
+
+		/* links bottom (password etc) */
+		.login #login p a {
+		color: #fff;
+		}
+		.login #login p a:hover {
+		color: #009EE2;
+		}
+		.privacy-policy-page-link {
+		display: none;
+		}
+	</style>
+	<?php
+}
+add_action('login_enqueue_scripts', 'my_login_stylesheet');
