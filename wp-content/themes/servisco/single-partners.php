@@ -2,8 +2,8 @@
 <?php while(have_posts()) : the_post(); ?>
 
 <div class="partnerpost">
-	<nav class="partnerpost__back autosize-m">
-		<a href="<?php echo get_page_link(13); ?>">
+	<nav class="partnerpost__back">
+		<a href="<?php echo get_page_link(13); ?>" class="autosize-m">
 			<i class="fas fa-chevron-left"></i> Liste des partenaires
 		</a>
 	</nav>

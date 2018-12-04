@@ -17,15 +17,21 @@
 	<ul class="blog__list">
 		<?php while(have_posts()) : the_post(); ?>
 			<li class="blog__item">
-				<a class="blog__picture" href="<?php the_permalink(); ?>">
-					<?php
-					if(has_post_thumbnail()) {
-						the_post_thumbnail(array('400', '400')); //thumbnail, medium, large, full, array('700', '600')
-					}
-					?>
+				<a class="blog__picture block-3-2" href="<?php the_permalink(); ?>">
+					<span>
+						<span>
+							<?php
+							if(has_post_thumbnail()) {
+								the_post_thumbnail(array('400', '400')); //thumbnail, medium, large, full, array('700', '600')
+							}
+							?>
+						</span>
+					</span>
 				</a>
 				<h3 class="blog__title">
-					<?php the_title(); ?>
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>
+					</a>
 				</h3>
 				<div class="blog__date">
 					<?php echo get_the_date('d/m/Y'); ?>

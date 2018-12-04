@@ -22,11 +22,11 @@
 
 <section class="advantagespercents">
 	<?php if(have_rows('percents_list')) : ?>
-		<ul class="advantagespercents__list">
+		<ul class="advantagespercents__list" id="js-zone-numbers" data-js-zone-numbers-instastart>
 			<?php while (have_rows('percents_list')) : the_row(); ?>
 				<li class="advantagespercents__item">
 					<h3 class="advantagespercents__title">
-						+ <?php the_sub_field('percent'); ?> %
+						+ <span data-js-autoincrement="<?php the_sub_field('percent'); ?>">0</span> %
 					</h3>
 					<div class="advantagespercents__text">
 						<?php the_sub_field('text'); ?>

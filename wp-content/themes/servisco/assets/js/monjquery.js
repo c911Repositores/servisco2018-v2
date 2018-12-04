@@ -104,13 +104,18 @@ function fireNumbersIncrement() {
 }
 
 $(document).ready(function() {
-	if($('#js-banner-numbers').length == 1){
+	if($('#js-zone-numbers').length == 1){
 
 		var numbersIncrementIsStarted = false;
 
+		if($('#js-zone-numbers').is("[data-js-zone-numbers-instastart]")) {
+			numbersIncrementIsStarted = true;
+			fireNumbersIncrement();
+		}
+
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
-			var targetPos = $("#js-banner-numbers").position().top;
+			var targetPos = $("#js-zone-numbers").position().top;
 			var screenh = $(window).height();
 
 			if(scroll + screenh/4*3 >= targetPos && numbersIncrementIsStarted == false) {

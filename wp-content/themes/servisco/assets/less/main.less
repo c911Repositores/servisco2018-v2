@@ -1,5 +1,5 @@
 
-@size_header_mobile: 1000px;
+@size_header_mobile: 1150px;
 @size_header_smallestheader: 700px;
 
 .header-spacer {
@@ -159,9 +159,13 @@ will-change: opacity;
 		top: -5px;
 		}
 	}
-	li.selected {
+	li.current_page_item {
+		&::before {
+		width: 100%;
+		background-color: @skyblue;
+		}
 		a {
-		color: @theme;
+		font-weight: bold;
 		}
 	}
 	&.header__navbarlist--pcopen {
@@ -801,18 +805,12 @@ margin-top: 150px;
 	flex-basis: 700px;
 	flex-shrink: 0;
 	.block-ratio(18,9);
-		// img {
-		// width: 100%;
-		// height: auto;
-		// display: block;
-		// }
-		// iframe {
-		// display: block;
-		// border: 0;
-		// width: 100%;
-		// height: 66vw;
-		// max-height: 460px;
-		// }
+		iframe {
+		display: block;
+		border: 0;
+		width: 100%;
+		height: 100%;
+		}
 	}
 	.ourservices__number {
 	flex-basis: 40%;
@@ -1064,15 +1062,17 @@ display: none;
 
 .partnerpost {
 	.partnerpost__back {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin: 15px 0;
+	background-color: @theme;
 		a {
+		display: block;
 		text-decoration: none;
-		color: @theme;
+		color: #fff;
 		font-size: 18px;
+		padding: 5px;
 		}
 		a:hover {
-		text-decoration: underline;
+		background-color: @theme_dark;
 		}
 	}
 	.partnerpost__logo {
@@ -1122,11 +1122,49 @@ display: none;
 	margin-bottom: 120px;
 	vertical-align: top;
 	}
+	.blog__picture {
+	display: block;
+	position: relative;
+	overflow: hidden;
+		&::before, &::after {
+		content: ' ';
+		position: absolute;
+		height: 30px;
+		background-color: fade(#fff, 20%);
+		width: 100%;
+		left: 0;
+		top: 0px;
+		z-index: 5;
+		border-bottom: 2px solid @theme;
+		transform: translate(-100%,0);
+		will-change: transform;
+		transition: transform 1s;
+		}
+		&::after {
+		top: auto;
+		bottom: 0px;
+		border-bottom: 0;
+		border-top: 2px solid @theme;
+		transform: translate(100%,0);
+		}
+	}
+	.blog__picture:hover {
+		&::before, &::after {
+		transform: translate(0%,0);
+		}
+	}
 	.blog__title {
 	font-size: 21px;
 	font-weight: bold;
 	color: @theme;
 	margin: 30px 0;
+		a {
+		color: inherit;
+		text-decoration: none;
+		}
+		a:hover {
+		text-decoration: underline;
+		}
 	}
 	.blog__date {
 	font-size: 16px;
@@ -1150,14 +1188,17 @@ display: none;
 
 .article {
 	.article__back {
-	margin: 30px 0;
+	margin: 15px 0;
+	background-color: @theme;
 		a {
+		display: block;
 		text-decoration: none;
-		color: @theme;
+		color: #fff;
 		font-size: 18px;
+		padding: 5px;
 		}
 		a:hover {
-		text-decoration: underline;
+		background-color: @theme_dark;
 		}
 	}
 	.article__title {
@@ -1165,7 +1206,8 @@ display: none;
 	font-weight: bold;
 	color: @theme;
 	text-align: center;
-	margin: 60px 0;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	padding: 0;
 	margin-bottom: 15px;
 	}

@@ -199,7 +199,7 @@
 
 <section class="datanumbers autosize">
 	<?php if(have_rows('numbers_list')) : ?>
-		<ul id="js-banner-numbers" class="datanumbers__list">
+		<ul id="js-zone-numbers" class="datanumbers__list">
 			<?php while (have_rows('numbers_list')) : the_row(); ?>
 				<li class="datanumbers__item">
 					<div class="datanumbers__icon">
