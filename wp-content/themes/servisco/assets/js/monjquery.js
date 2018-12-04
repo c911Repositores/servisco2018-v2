@@ -163,10 +163,32 @@ function scrollToService(link) {
 	$('html,body').animate({scrollTop: offset}, 1000);
 }
 
+function activeServiceMenuOnScroll() {
+	var scrollTop = $(window).scrollTop() + 300;
+	var itemPassedCpt = 0;
+
+	$(".ourservices__item").each(function() {
+		var itemPosTop = Math.round($(this).offset().top);
+
+		if(scrollTop > itemPosTop) {
+			itemPassedCpt++;
+		}
+	});
+
+	$(".ourservices__navigationitem").removeClass("ourservices__navigationitem--active");
+	$(".ourservices__navigationitem:nth-child(" + itemPassedCpt + ")").addClass("ourservices__navigationitem--active");
+}
+
 $(document).ready(function() {
 	$("[data-js-button-service-number]").on("click", function() {
 		scrollToService($(this));
 	});
+
+	if($(".ourservices__item").length > 0) {
+		$(window).scroll(function() {
+			activeServiceMenuOnScroll();
+		});
+	}
 });
 
 
