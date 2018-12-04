@@ -910,7 +910,6 @@ right: 30px;
 	flex-direction: column;
 	justify-content: center;
 	overflow: hidden;
-	padding-left: 35px;
 	align-items: flex-end;
 	}
 	.ourservices__navigationlist.stp-lift-on {
@@ -925,24 +924,25 @@ right: 30px;
 	text-align: right;
 	cursor: pointer;
 	position: relative;
-	transform: translate(0,0);
+	transform: translate(35px,0);
 	will-change: transform;
 	transition: transform 0.3s;
 	background-color: #fff;
 	padding: 5px;
+	padding-right: 35px;
 		&::after {
 		content: ' ';
 		display: block;
 		height: 2px;
 		position: absolute;
 		top: 50%;
-		right: -35px;
+		right: 0px;
 		width: 30px;
 		background-color: @skyblue;
 		}
 	}
 	.ourservices__navigationitem:hover {
-	transform: translate(-35px,0);
+	transform: translate(0px,0);
 	}
 @media all and (max-width:1200px) {
 display: none;
