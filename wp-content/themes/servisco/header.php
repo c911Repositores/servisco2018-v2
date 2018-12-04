@@ -25,6 +25,7 @@
 			</div>
 
 			<?php
+			$menu = "off";
 			if(isset($_COOKIE["menu"])) {
 				$menu = $_COOKIE["menu"];
 			}
