@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <?php while(have_posts()) : the_post(); ?>
 
-<div class="cbanner cbanner--darktext cbanner--contact" data-stp-parallax>
+<div class="cbanner cbanner--darktext cbanner--contact" data-stp-parallax-off style="background-position: 50% 50%;">
 	<h1 class="cbanner__title">
 		<?php the_field('page_title'); ?>
 	</h1>
