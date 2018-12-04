@@ -45,9 +45,23 @@
 
 <section class="ourservices">
 	<?php $args = array('post_type' => 'services'); ?>
-	<?php $number_of_service = 1; ?>
 	<?php $loop = new WP_Query( $args ); ?>
+
+		<nav class="ourservices__navigation" data-stp-lift-wrapper>
+			<ul class="ourservices__navigationlist" data-stp-lift>
+				<?php $number_of_service = 1; ?>
+				<?php while ($loop->have_posts() ) : $loop->the_post(); ?>
+					<li class="ourservices__navigationitem" data-js-button-service-number="<?php echo $number_of_service; ?>">
+						<?php echo $number_of_service; ?>. <?php the_title(); ?>
+					</li>
+					<?php $number_of_service++; ?>
+				<?php endwhile; ?>
+			</ul>
+		</nav>
+
+
 		<ul class="ourservices__list">
+			<?php $number_of_service = 1; ?>
 			<?php while ($loop->have_posts() ) : $loop->the_post(); ?>
 				<li class="ourservices__item">
 					<div class="ourservices__target" id="<?php echo "service" . $number_of_service; ?>"></div>
@@ -112,6 +126,8 @@ $yourareredirections_groups = [
 	get_field('your_are_private_block')
 ];
 ?>
+
+<div class="white-wrapper-mask">
 <section class="yourareredirections">
 	<ul class="yourareredirections__list">
 		<?php foreach ($yourareredirections_groups as $group): ?>
@@ -134,3 +150,4 @@ $yourareredirections_groups = [
 
 <?php endwhile; ?>
 <?php get_footer(); ?>
+</div>

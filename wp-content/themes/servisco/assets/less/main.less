@@ -752,6 +752,10 @@ margin-top: 150px;
 //////////////////////////////////////////////////////////////////////////////////////
 
 .ourservices {
+position: relative;
+	.ourservices__navigation {
+	// css à part juste après
+	}
 	.ourservices__list {
 	list-style-type: none;
 	padding: 0;
@@ -888,6 +892,60 @@ margin-top: 150px;
 	max-width: 700px;
 	margin: auto;
 	}
+}
+}
+
+.ourservices__navigation {
+position: absolute;
+z-index: 5;
+top: 0;
+right: 30px;
+	.ourservices__navigationlist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	padding-left: 35px;
+	align-items: flex-end;
+	}
+	.ourservices__navigationlist.stp-lift-on {
+	position: fixed;
+	top: 0px;
+	right: 30px;
+	}
+	.ourservices__navigationitem {
+	font-size: 16px;
+	font-weight: 200;
+	color: @theme;
+	text-align: right;
+	cursor: pointer;
+	position: relative;
+	transform: translate(0,0);
+	will-change: transform;
+	transition: transform 0.3s;
+	background-color: #fff;
+	padding: 5px;
+		&::after {
+		content: ' ';
+		display: block;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		right: -35px;
+		width: 30px;
+		background-color: @skyblue;
+		}
+	}
+	.ourservices__navigationitem:hover {
+	transform: translate(-35px,0);
+	}
+@media all and (max-width:1200px) {
+display: none;
 }
 }
 

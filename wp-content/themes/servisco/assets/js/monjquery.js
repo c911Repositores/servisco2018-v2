@@ -149,6 +149,28 @@ $(document).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+// SERVICES SCROLL MENU
+////////////////////////////////////////////////////////////////////////////////////
+function scrollToService(link) {
+	var targetNbr = link.attr("data-js-button-service-number");
+
+	var target = $(".ourservices__item:nth-child(" + targetNbr + ")")
+
+	var decalage = $(".header").height() + 15;
+
+	var offset = target.offset();
+	offset = offset.top - decalage;
+	$('html,body').animate({scrollTop: offset}, 1000);
+}
+
+$(document).ready(function() {
+	$("[data-js-button-service-number]").on("click", function() {
+		scrollToService($(this));
+	});
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////
 // AUTO INCREMENTATION DES CHIFFRES (HOME)
 ////////////////////////////////////////////////////////////////////////////////////
 function cleanedValue(value) {
