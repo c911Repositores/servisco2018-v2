@@ -23,17 +23,21 @@
 			<div class="header__agencylink">
 				<?php get_template_part('inc/agency-contact-button'); ?>
 			</div>
+
+			<?php
+			if(isset($_COOKIE["menu"])) {
+				$menu = $_COOKIE["menu"];
+			}
+			?>
 			<nav class="header__navbar">
-				<button class="header__button">
+				<button class="header__button<?php echo (($menu === 'on') ? ' header__button--pccrossed' : ''); ?>">
 					<span class="header__buttonbar-1"></span>
 					<span class="header__buttonbar-2"></span>
 					<span class="header__buttonbar-3"></span>
 					<span class="header__buttonbar-4"></span>
 				</button>
-				<ul class="header__navbarlist">
+				<ul class="header__navbarlist<?php echo (($menu === 'on') ? ' header__navbarlist--pcopen' : ''); ?>">
 					<?php wp_nav_menu(array('menu' => 'Menu principal', 'items_wrap' => '%3$s', 'container' => false)); ?>
 				</ul>
 			</nav>
 		</header>
-
-		

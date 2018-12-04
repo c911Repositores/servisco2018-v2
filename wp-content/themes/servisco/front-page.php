@@ -15,7 +15,7 @@
 			</div>
 
 			<div class="homebanner__link">
-				<a class="cbutton cbutton--borderwhite" href="">
+				<a class="cbutton cbutton--borderwhite" href="<?php echo get_page_link(13); ?>">
 					<?php echo $hero['button_text']; ?>
 				</a>
 			</div>
@@ -99,7 +99,7 @@
 				<?php wp_reset_postdata(); ?>
 
 				<div class="packsgroups__link">
-					<a class="cbutton" href="<?php echo get_page_link(11) . '&option=' . $pack_name; ?>">
+					<a class="cbutton" href="<?php echo get_page_link(11) . '?option=' . $pack_name; ?>">
 						<?php the_sub_field('button_text'); ?>
 					</a>
 				</div>
@@ -144,7 +144,7 @@
 </section>
 
 <div class="cbutton-ctn mg60 autosize-m">
-	<a href="<?php echo get_page_link(11) . '&option=basic_pack'; ?>" class="cbutton">
+	<a href="<?php echo get_page_link(11) . '#services_list'; ?>" class="cbutton">
 		<?php the_field('services_link_text_button'); ?>
 	</a>
 </div>
@@ -190,7 +190,7 @@
 			</div>
 		</div>
 	</div>
-	<a href="<?php echo get_page_link(11) . '&option=basic_pack'; ?>" class="cbutton">
+	<a href="<?php echo get_page_link(13) . '#alink_partners'; ?>" class="cbutton">
 		<?php the_field('partners_link_text_button'); ?>
 	</a>
 </div>

@@ -14,9 +14,7 @@
 	</ul>
 
 	<div class="cbutton-ctn autosize-m">
-		<a class="cbutton cbutton--light" href="">
-			Je suis une agence
-		</a>
+		<?php get_template_part('inc/agency-contact-button'); ?>
 	</div>
 
 	<nav class="footer__navbar">

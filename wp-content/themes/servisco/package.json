@@ -7,10 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "normalize.css": "*",
     "formflex": "*",
-    "startpack": "*",
-    "sliker": "*"
+    "js-cookie": "^2.2.0",
+    "normalize.css": "*",
+    "sliker": "*",
+    "startpack": "*"
   },
   "author": "Zenike",
   "license": "ISC"

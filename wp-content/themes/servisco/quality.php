@@ -37,7 +37,7 @@
 	<?php endif; ?>
 </section>
 
-<span class="verticalseparator"></span>
+<span id="services_list" class="verticalseparator"></span>
 
 <h2 class="ctitle mg90 autosize-m">
 	<?php the_field('services_title'); ?>

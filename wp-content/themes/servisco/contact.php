@@ -16,7 +16,7 @@
 	</ul>
 </div>
 
-<main class="contact">
+<main class="contact basic-form-style">
 
 	<h2 class="ctitle mg60 autosize-m">
 		<?php the_field('form_title'); ?>
