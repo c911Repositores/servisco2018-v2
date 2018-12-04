@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="cbanner cbanner--blog">
+<div class="cbanner cbanner--blog" data-stp-parallax>
 	<h1 class="cbanner__title">
 		<?php the_field('page_title',15); ?>
 	</h1>

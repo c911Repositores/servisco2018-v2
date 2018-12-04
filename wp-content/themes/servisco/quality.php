@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <?php while(have_posts()) : the_post(); ?>
 
-<div class="cbanner cbanner--quality">
+<div class="cbanner cbanner--quality" data-stp-parallax>
 	<h1 class="cbanner__title">
 		<?php the_field('page_title'); ?>
 	</h1>
