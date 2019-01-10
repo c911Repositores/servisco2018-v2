@@ -193,7 +193,7 @@ $(document).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-// AUTO INCREMENTATION DES CHIFFRES (HOME)
+// GESTION DES CODES POSTAUX
 ////////////////////////////////////////////////////////////////////////////////////
 function cleanedValue(value) {
 	var trimedValue = value.trim();
@@ -266,6 +266,9 @@ function filterThePartners() {
 		// par sécurité, enlever tous les selected
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
 	} else {
+		// dans tous les stades intermédiaires, les li sont masqués par défaut et aucun n'est sélectionné
+		// n'aura un effet que la première fois et après $etre repassé par une entrée vide (voir plus bas, if 0)
+		$(".partners__list .partners__item").addClass("partners__item--maskeddefaut");
 		// si le filtre est rempli mais pas valide (4) ou vide (0), enlever tous les selected (aucun partner affiché)
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
 	}
