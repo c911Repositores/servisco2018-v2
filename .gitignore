@@ -24,6 +24,8 @@ node_modules/
 /sitemap.xml
 /sitemap.xml.gz
 
+.htpasswd
+
 prepros-6.config
 *.css.map
 *.js.map
