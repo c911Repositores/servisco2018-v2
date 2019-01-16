@@ -12,6 +12,8 @@ wp-content/wp-cache-config.php
 wp-content/plugins/
 wp-content/languages/plugins/
 wp-content/themes/plugins/
+wp-content/updraft/
+wp-content/stats/
 wp-content/themes/servisco/assets/img/export/
 
 /vendor/

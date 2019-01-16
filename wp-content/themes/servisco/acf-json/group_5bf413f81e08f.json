@@ -1,0 +1,173 @@
+{
+    "key": "group_5bf413f81e08f",
+    "title": "services",
+    "fields": [
+        {
+            "key": "field_5bf41a2e9f26c",
+            "label": "Icone d'illustration",
+            "name": "icone_dillustration",
+            "type": "select",
+            "instructions": "Choisissez l'icone animée qui correspond au service.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2dmap": "2dmap",
+                "3dmap": "3dmap",
+                "descriptive": "descriptive",
+                "drone": "drone",
+                "matterport": "matterport",
+                "meters": "meters",
+                "photocamera": "photocamera",
+                "signboard": "signboard",
+                "videocamera": "videocamera",
+                "virtualtour": "virtualtour"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bf4158130008",
+            "label": "Lien youtube (clé uniquement)",
+            "name": "youtube_url",
+            "type": "text",
+            "instructions": "Entrez uniquement la clé youtube, c'est à dire le long code unique à la fin de l'url d'une vidéo.<br>\r\n<br>\r\nSI vous remplissez ce champs, le champs photos disparaîtra car la vidéo youtube prendre sa place",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bf414a330007",
+            "label": "Photo d'illustration",
+            "name": "picture",
+            "type": "image",
+            "instructions": "Photo qui illustre le service.<br>\r\nDoit être horizontale, idéalement en 16\/9.<br>\r\nCette photo n'est utilisée que si aucune vidéo youtube n'est renseignée",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bf4158130008",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1920,
+            "max_height": 1920,
+            "max_size": 2,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c3f4fd7a5561",
+            "label": "Fichié lié à la photo d'illustration",
+            "name": "file",
+            "type": "file",
+            "instructions": "Ajoutez ici un document lié au service. Celui ci sera téléchargé en cliquant sur la photo.<br>\r\nAttention, ça ne marche pas si vous ajoutez une vidéo.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bf4158130008",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5bf4164530009",
+            "label": "Description longue du service",
+            "name": "text",
+            "type": "wysiwyg",
+            "instructions": "Utilisé sur la page complète des services.<br>\r\nVous pouvez utiliser des titres dans ce texte mais n'utilisez pas de titre de niveau 1 et 2.<br>\r\nUniquement 3 et plus.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5bffbb52c33b8",
+            "label": "Description courte du service",
+            "name": "text_short",
+            "type": "textarea",
+            "instructions": "Utilisé sur la page home.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "services"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1547653434
+}

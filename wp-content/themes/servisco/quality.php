@@ -83,23 +83,37 @@
 						</div>
 						<div class="ourservices__picture block-ratio-custom">
 							<div>
-								<div>
-									<?php
-									// si vidéo youtube => l'afficher
-									if(get_field('youtube_url')) {
-										// grace à l'id indiqué dans l'admin
-										$yt_id = get_field('youtube_url');
-										echo '<iframe src="https://www.youtube.com/embed/' . $yt_id . '" allowfullscreen></iframe>';
+								<?php
+								// si vidéo youtube => l'afficher
+								if(get_field('youtube_url')) {
+									// grace à l'id indiqué dans l'admin
+									$yt_id = get_field('youtube_url');
+									echo '<div>';
+									echo '<iframe src="https://www.youtube.com/embed/' . $yt_id . '" allowfullscreen></iframe>';
+									echo '</div>';
+								} else {
+									// si un fichier est lié à la photo, afficher dans un lien, sinon un div
+									if(get_field('file')) {
+										echo '<a href="' . get_field('file') . '" title="Télécharger le fichier">';
 									} else {
-										// sinon, l'image
-										$image = get_field('picture');
-										$size = array('700', '700'); //thumbnail, medium, large, full, array('700', '600')
-										if($image) {
-											echo wp_get_attachment_image($image, $size);
-										}
+										echo '<div>';
 									}
-									?>
-								</div>
+
+									// sinon, l'image
+									$image = get_field('picture');
+									$size = array('700', '700'); //thumbnail, medium, large, full, array('700', '600')
+									if($image) {
+										echo wp_get_attachment_image($image, $size);
+									}
+
+									// si un fichier est lié à la photo, fermer un lien, sinon le div
+									if(get_field('file')) {
+										echo '</a>';
+									} else {
+										echo '</div>';
+									}
+								}
+								?>
 							</div>
 						</div>
 						<div class="ourservices__pictureright">&nbsp;</div>
