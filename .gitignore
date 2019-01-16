@@ -13,7 +13,7 @@ wp-content/plugins/
 wp-content/languages/plugins/
 wp-content/themes/plugins/
 wp-content/updraft/
-wp-content/stats/
+/stats/
 wp-content/themes/servisco/assets/img/export/
 
 /vendor/
