@@ -84,12 +84,12 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 ///// Customize login page
 //////////////////////////////////////////////////////////////////////////////////////
 function my_login_logo_url() {
-	return "http://www.servisco.be";
+	return "https://servisco.immo";
 }
 add_filter('login_headerurl', 'my_login_logo_url');
 
 function my_login_logo_url_title() {
-	return 'Your Site Name and Info';
+	return 'Servisco - realty partner of tomorrow';
 }
 add_filter('login_headertitle', 'my_login_logo_url_title');
 
