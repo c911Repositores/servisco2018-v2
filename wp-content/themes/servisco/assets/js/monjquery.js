@@ -147,7 +147,6 @@ $(document).ready(function() {
 });
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////
 // SERVICES SCROLL MENU
 ////////////////////////////////////////////////////////////////////////////////////
@@ -228,7 +227,13 @@ function checkIfZipIsIn(thisArray, zip) {
 
 function moveToStartOfList() {
 	var offset = $("#js_anchor_partnerlist_scroll").offset();
+
 	var headerHeight = $(".header").height();
+
+	if($("#wpadminbar").length == 1) {
+		headerHeight = headerHeight + $("#wpadminbar").height();
+	}
+
 	offset = offset.top - headerHeight - 15;
 	$('html,body').animate({scrollTop: offset}, 1000);
 }
@@ -249,7 +254,6 @@ function filterThePartners() {
 
 			// si la valeur entrée correspond à une entrée du tableau
 			if(checkIfZipIsIn(zipArray, cleanValue)) {
-				moveToStartOfList();
 				// définir les li comme masqués par défaut
 				// n'aura un effet que la première fois et après $etre repassé par une entrée vide (voir plus bas, if 0)
 				$(".partners__list .partners__item").addClass("partners__item--maskeddefaut");
@@ -260,22 +264,47 @@ function filterThePartners() {
 				$(this).removeClass("partners__item--selected");
 			}
 		});
+
+		// faire descendre la page
+		moveToStartOfList();
+
+		// MESSAGES
+		// enlever le message invitant à finir de taper
+		$(".partners__typingmessage").removeClass("partners__typingmessage--show");
+		// si vide, afficher la zone de formulaire
+		if($(".partners__item--selected").length == 0) {
+			$(".partners__ifempty").addClass("partners__ifempty--show");
+		}
 	} else if(filterValueLength == 0) {
 		// si le filtre est vidé, remettre en visible par défaut
 		$(".partners__list .partners__item").removeClass("partners__item--maskeddefaut");
 		// par sécurité, enlever tous les selected
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
+
+		// MESSAGES
+		// enlever le message invitant à finir de taper
+		$(".partners__typingmessage").removeClass("partners__typingmessage--show");
+		// masquer la zone de formulaire
+		$(".partners__ifempty").removeClass("partners__ifempty--show");
 	} else {
 		// dans tous les stades intermédiaires, les li sont masqués par défaut et aucun n'est sélectionné
 		// n'aura un effet que la première fois et après $etre repassé par une entrée vide (voir plus bas, if 0)
 		$(".partners__list .partners__item").addClass("partners__item--maskeddefaut");
 		// si le filtre est rempli mais pas valide (4) ou vide (0), enlever tous les selected (aucun partner affiché)
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
+
+		// MESSAGES
+		// afficher le message invitant à finir de taper
+		$(".partners__typingmessage").addClass("partners__typingmessage--show");
+		// masquer la zone de formulaire
+		$(".partners__ifempty").removeClass("partners__ifempty--show");
 	}
 }
 
 // à chaque entrée dans l'input, tenter de filtrer
 $(document).ready(function(){
+	$(".partners__filter input").val("");
+
 	$(".partners__filter input").on("input", function(){
 		filterThePartners();
 	});

@@ -52,7 +52,7 @@
 	</h2>
 
 	<ul class="partners__list">
-		<?php $args = array('post_type' => 'partners'); ?>
+		<?php $args = array('post_type' => 'partners', 'orderby' => 'rand'); ?>
 		<?php $loop = new WP_Query($args); ?>
 		<?php while($loop->have_posts()) : $loop->the_post(); ?>
 			<li class="partners__item" data-js-zip="<?php the_field('partner_zone_zips'); ?>">
@@ -72,6 +72,20 @@
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	</ul>
+
+	<div class="partners__typingmessage">
+		<?php the_field('incomplete_zip_message'); ?>
+	</div>
+
+	<div class="partners__ifempty">
+		<div class="partners__ifemptytext">
+			<?php the_field('zip_with_no_agence_message'); ?>
+		</div>
+
+		<div class="partners__ifemptyform basic-form-style">
+			<?php echo do_shortcode('[contact-form-7 title="partenaires"]'); ?>
+		</div>
+	</div>
 </div>
 
 <?php endwhile; ?>

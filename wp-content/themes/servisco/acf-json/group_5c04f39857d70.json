@@ -1,0 +1,138 @@
+{
+    "key": "group_5c04f39857d70",
+    "title": "partenaires",
+    "fields": [
+        {
+            "key": "field_5c04f659a4a45",
+            "label": "Titre de la première option",
+            "name": "option1_title",
+            "type": "wysiwyg",
+            "instructions": "Bloc texte + bouton AVANT le \"ou\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c04f6e2a4a46",
+            "label": "Texte du bouton de la première option",
+            "name": "option1_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c04f721892e0",
+            "label": "Titre de la deuxième option",
+            "name": "option2_title",
+            "type": "wysiwyg",
+            "instructions": "Titre juste après le \"ou\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c04f88c892e1",
+            "label": "Titre de la liste des logos d'agences",
+            "name": "partners_list_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c404d2c5e696",
+            "label": "Message en cas de code postal incomplet",
+            "name": "incomplete_zip_message",
+            "type": "text",
+            "instructions": "Ce message s'affichera sous la liste des partenaires quand le code entré ne comprend pas 4 chiffres. Il le verra donc apparaître dès le premier caractère entré pour l'inviter à taper le code postal entier.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c404db85e697",
+            "label": "Message en cas de code postal non attribué",
+            "name": "zip_with_no_agence_message",
+            "type": "wysiwyg",
+            "instructions": "Ce message apparaîtra (suivi d'un formulaire) sous la liste des logos quand le code postal à 4 chiffres entré ne correspond à aucune agence.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "partners.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547718725
+}
