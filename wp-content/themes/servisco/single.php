@@ -28,7 +28,7 @@
 </div>
 
 <aside class="newslettermodule basic-form-style">
-	<?php echo do_shortcode('[mc4wp_form id="232"]'); ?>
+	<?php the_field('mailchimp_shortcode', 'option'); ?>
 </aside>
 
 <?php endwhile; ?>
