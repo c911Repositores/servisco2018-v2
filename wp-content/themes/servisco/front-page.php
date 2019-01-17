@@ -157,25 +157,37 @@
 
 <div class="partners autosize-m">
 	<ul class="partners__list">
-		<?php $args = array('post_type' => 'partners'); ?>
-		<?php $loop = new WP_Query($args); ?>
-		<?php while($loop->have_posts()) : $loop->the_post(); ?>
-			<li class="partners__item">
-				<a class="partners__link" href="<?php the_permalink(); ?>">
-					<?php
-					$image = get_field('logo');
-					$size = 'medium'; //thumbnail, medium, large, full, array('700', '600')
-					if($image) {
-						echo wp_get_attachment_image($image, $size);
-					}
-					?>
-					<span class="partners__more">
-						En savoir plus
-					</span>
-				</a>
-			</li>
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
+		<?php
+		$args = array('post_type' => 'partners');
+		$loop = new WP_Query($args);
+		// compteur pour l'animation (slider fade in fade out)
+		// seuls les trois premiers li doivent être visibles
+		$visible_cpt = 1;
+		while($loop->have_posts()) : $loop->the_post();
+		?>
+			<?php if($visible_cpt <= 3 ) : ?>
+				<li class="partners__item partners__item--selected">
+			<?php else : ?>
+				<li class="partners__item">
+			<?php endif; ?>
+					<a class="partners__link" href="<?php the_permalink(); ?>">
+						<?php
+						$image = get_field('logo');
+						$size = 'medium'; //thumbnail, medium, large, full, array('700', '600')
+						if($image) {
+							echo wp_get_attachment_image($image, $size);
+						}
+						?>
+						<span class="partners__more">
+							En savoir plus
+						</span>
+					</a>
+				</li>
+		<?php
+		$visible_cpt++;
+		endwhile;
+		wp_reset_postdata();
+		?>
 	</ul>
 </div>
 

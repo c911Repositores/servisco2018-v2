@@ -254,9 +254,6 @@ function filterThePartners() {
 
 			// si la valeur entrée correspond à une entrée du tableau
 			if(checkIfZipIsIn(zipArray, cleanValue)) {
-				// définir les li comme masqués par défaut
-				// n'aura un effet que la première fois et après $etre repassé par une entrée vide (voir plus bas, if 0)
-				$(".partners__list .partners__item").addClass("partners__item--maskeddefaut");
 				// ajouter selected au partner parcouru
 				$(this).addClass("partners__item--selected");
 			} else {
@@ -276,20 +273,15 @@ function filterThePartners() {
 			$(".partners__ifempty").addClass("partners__ifempty--show");
 		}
 	} else if(filterValueLength == 0) {
-		// si le filtre est vidé, remettre en visible par défaut
-		$(".partners__list .partners__item").removeClass("partners__item--maskeddefaut");
 		// par sécurité, enlever tous les selected
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
 
 		// MESSAGES
-		// enlever le message invitant à finir de taper
-		$(".partners__typingmessage").removeClass("partners__typingmessage--show");
+		// afficher le message invitant à finir de taper
+		$(".partners__typingmessage").addClass("partners__typingmessage--show");
 		// masquer la zone de formulaire
 		$(".partners__ifempty").removeClass("partners__ifempty--show");
 	} else {
-		// dans tous les stades intermédiaires, les li sont masqués par défaut et aucun n'est sélectionné
-		// n'aura un effet que la première fois et après $etre repassé par une entrée vide (voir plus bas, if 0)
-		$(".partners__list .partners__item").addClass("partners__item--maskeddefaut");
 		// si le filtre est rempli mais pas valide (4) ou vide (0), enlever tous les selected (aucun partner affiché)
 		$(".partners__list .partners__item").removeClass("partners__item--selected");
 
@@ -308,6 +300,70 @@ $(document).ready(function(){
 	$(".partners__filter input").on("input", function(){
 		filterThePartners();
 	});
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// Défilement des logos sur l'accueil
+////////////////////////////////////////////////////////////////////////////////////
+var logo_slide_random_nbr;
+var nbr_logos_partners = 3;
+$(document).ready(function() {
+	if($(".partners__list .partners__item").length > nbr_logos_partners){
+		setInterval(function () {
+			var nbr_temp = Math.ceil(Math.random()*nbr_logos_partners);
+			if(nbr_temp == logo_slide_random_nbr){
+				if(nbr_temp < nbr_logos_partners){
+					logo_slide_random_nbr = nbr_temp + 1;
+				}else{
+					logo_slide_random_nbr = nbr_temp - 1;
+				}
+			}else{
+				logo_slide_random_nbr = nbr_temp;
+			}
+
+			var cpt_each_b = 1;
+			var selection_active;
+			$(".partners__list .partners__item--selected").each(function(){
+				if(cpt_each_b == logo_slide_random_nbr){
+					selection_active = $(this);
+				}
+				cpt_each_b++;
+			});
+
+			var li_hidden_length = $(".partners__list .partners__item").not(".partners__item--selected").length;
+			var random_of_hidden = Math.ceil(Math.random()*li_hidden_length);
+			var cpt_each_a = 1;
+			var selection_hidden;
+			$(".partners__list .partners__item").not(".partners__item--selected").each(function(){
+				if(cpt_each_a == random_of_hidden){
+					selection_hidden = $(this);
+				}
+				cpt_each_a++;
+			});
+
+			//déplacement du logo au bon endroit (après celui à masquer)
+			selection_hidden.insertAfter(selection_active)
+
+			//ANIMATION: échanger les img à l'intérieur des li ciblés
+			var liv = selection_active;//v pour visible
+			var lih = selection_hidden;//h pour hidden
+			var imgo = selection_active.find("a");//o pour old
+			var imgn = selection_hidden.find("a");//n pour new
+
+			imgo.animate({
+				opacity: 0
+			},500,function(){
+				lih.append(imgo);
+
+				imgn.css("opacity",0);
+				liv.append(imgn);
+				imgn.animate({
+					opacity: 1
+				},200);
+			});
+		}, 2500);
+	}
 });
 
 

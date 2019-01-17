@@ -11,31 +11,9 @@
 	<h1 class="cbanner__title">
 		<?php the_field('page_title'); ?>
 	</h1>
-	<ul class="cbanner__social">
+	<ul class="cbanner__social" id="alink_partners">
 		<?php get_template_part('inc/social-links'); ?>
 	</ul>
-</div>
-
-<h2 class="ctitle mg60 autosize-m">
-	<?php the_field('option1_title'); ?>
-</h2>
-
-<div class="cbutton-ctn">
-	<button class="cbutton" id="js_show_partnerform">
-		<?php the_field('option1_button_text'); ?>
-	</button>
-</div>
-
-<div class="partnerform basic-form-style">
-	<span class="verticalseparator"></span>
-
-	<span id="js_anchor_partnerform_scroll"></span>
-
-	<?php echo do_shortcode('[contact-form-7 id="208" title="decouvrir"]'); ?>
-</div>
-
-<div class="bluetext mg90" id="alink_partners">
-	OU
 </div>
 
 <h2 class="ctitle mg60 autosize-m">
@@ -73,7 +51,7 @@
 		<?php wp_reset_postdata(); ?>
 	</ul>
 
-	<div class="partners__typingmessage">
+	<div class="partners__typingmessage partners__typingmessage--show">
 		<?php the_field('incomplete_zip_message'); ?>
 	</div>
 
@@ -86,6 +64,28 @@
 			<?php echo do_shortcode('[contact-form-7 title="partenaires"]'); ?>
 		</div>
 	</div>
+</div>
+
+<div class="bluetext mg90">
+	OU
+</div>
+
+<h2 class="ctitle mg60 autosize-m">
+	<?php the_field('option1_title'); ?>
+</h2>
+
+<div class="cbutton-ctn">
+	<button class="cbutton" id="js_show_partnerform">
+		<?php the_field('option1_button_text'); ?>
+	</button>
+</div>
+
+<div class="partnerform basic-form-style">
+	<span class="verticalseparator"></span>
+
+	<span id="js_anchor_partnerform_scroll"></span>
+
+	<?php echo do_shortcode('[contact-form-7 id="208" title="decouvrir"]'); ?>
 </div>
 
 <?php endwhile; ?>

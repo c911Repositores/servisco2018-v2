@@ -1017,6 +1017,15 @@ margin: auto;
 display: none;
 }
 
+@keyframes pulsing_filter {
+	from {
+	box-shadow: 0 0 50px fade(@skyblue, 50%);
+	}
+	to {
+	box-shadow: 0 0 10px fade(@skyblue, 80%);
+	}
+}
+
 .partners {
 	.partners__filter {
 	margin: auto;
@@ -1025,6 +1034,11 @@ display: none;
 	border: 2px solid @theme;
 	border-radius: 60px;
 	overflow: hidden;
+	box-shadow: 0 0 30px fade(@skyblue, 50%);
+	animation-name: pulsing_filter;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 		input {
 		display: block;
 		border: none;
@@ -1072,8 +1086,6 @@ display: none;
 	.partners__item {
 	display: inline-block;
 	margin: 15px 30px;
-	}
-	.partners__item--maskeddefaut {
 	display: none;
 	}
 	.partners__item--selected {
