@@ -340,7 +340,7 @@ $(document).ready(function(){
 var logo_slide_random_nbr;
 var nbr_logos_partners = 3;
 $(document).ready(function() {
-	if($(".partners__list .partners__item").length > nbr_logos_partners){
+	if($("#js_partners_slider .partners__item").length > nbr_logos_partners){
 		setInterval(function () {
 			var nbr_temp = Math.ceil(Math.random()*nbr_logos_partners);
 			if(nbr_temp == logo_slide_random_nbr){

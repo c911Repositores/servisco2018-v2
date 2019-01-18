@@ -158,7 +158,7 @@
 </h2>
 
 <div class="partners autosize-m">
-	<ul class="partners__list">
+	<ul class="partners__list" id="js_partners_slider">
 		<?php
 		$args = array('post_type' => 'partners');
 		$loop = new WP_Query($args);
