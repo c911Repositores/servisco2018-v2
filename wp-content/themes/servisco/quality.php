@@ -81,37 +81,32 @@
 						<div class="ourservices__number">
 							<?php echo $number_of_service; ?>
 						</div>
-						<div class="ourservices__picture block-ratio-custom">
+						<div class="ourservices__picture block-16-9">
 							<div>
 								<?php
-								// si vidéo youtube => l'afficher
+								// si une vidéo existe, la charger au clic (et ignorer completement un éventuel fichier lié)
+								// si un fichier est lié à la photo, afficher dans un lien, sinon un div
 								if(get_field('youtube_url')) {
-									// grace à l'id indiqué dans l'admin
-									$yt_id = get_field('youtube_url');
-									echo '<div>';
-									echo '<iframe src="https://www.youtube.com/embed/' . $yt_id . '" allowfullscreen></iframe>';
-									echo '</div>';
+									echo '<div data-service-yt-id-trigger="' . get_field('youtube_url') . '">';
+										echo '<span class="ourservices__playerhover"><i class="fab fa-youtube"></i></span>';
+								} else if(get_field('file')) {
+									echo '<a href="' . get_field('file') . '" title="Télécharger le fichier">';
 								} else {
-									// si un fichier est lié à la photo, afficher dans un lien, sinon un div
-									if(get_field('file')) {
-										echo '<a href="' . get_field('file') . '" title="Télécharger le fichier">';
-									} else {
-										echo '<div>';
-									}
+									echo '<div>';
+								}
 
-									// sinon, l'image
-									$image = get_field('picture');
-									$size = array('700', '700'); //thumbnail, medium, large, full, array('700', '600')
-									if($image) {
-										echo wp_get_attachment_image($image, $size);
-									}
+								// sinon, l'image
+								$image = get_field('picture');
+								$size = 'large'; //thumbnail, medium, large, full, array('700', '600')
+								if($image) {
+									echo wp_get_attachment_image($image, $size);
+								}
 
-									// si un fichier est lié à la photo, fermer un lien, sinon le div
-									if(get_field('file')) {
-										echo '</a>';
-									} else {
-										echo '</div>';
-									}
+								// si un fichier est lié à la photo, fermer un lien, sinon le div
+								if(get_field('file')) {
+									echo '</a>';
+								} else {
+									echo '</div>';
 								}
 								?>
 							</div>

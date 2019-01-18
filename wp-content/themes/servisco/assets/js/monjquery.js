@@ -398,5 +398,26 @@ $(document).ready(function() {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////////
+// Activer les vidéos YOUTUBE au click
+////////////////////////////////////////////////////////////////////////////////////
+$(document).ready(function() {
+	$("[data-service-yt-id-trigger]").on("click", function() {
+
+		var container = $(this);
+		var ytId = $(this).attr("data-service-yt-id-trigger");
+
+		// créer le nouvel iframe
+		var iframe = document.createElement( "iframe" );
+		iframe.setAttribute( "frameborder", "0" );
+		iframe.setAttribute( "allowfullscreen", "" );
+		iframe.setAttribute( "src", "https://www.youtube.com/embed/" + ytId + "?rel=0&showinfo=0&autoplay=1" );
+
+		container.html("");
+		container.append(iframe);
+	});
+});
+
+
 // END AUTOINVOKED FUNCTION //////////////////////////////////////////////////////////////
 })(jQuery);

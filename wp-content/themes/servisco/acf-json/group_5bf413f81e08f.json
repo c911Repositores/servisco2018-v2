@@ -61,14 +61,7 @@
             "type": "image",
             "instructions": "Photo qui illustre le service.<br>\r\nDoit être horizontale, idéalement en 16\/9.<br>\r\nCette photo n'est utilisée que si aucune vidéo youtube n'est renseignée",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bf4158130008",
-                        "operator": "==empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -169,5 +162,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1547653434
+    "modified": 1547815975
 }
