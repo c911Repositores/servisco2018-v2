@@ -41,6 +41,20 @@ z-index: 100;
 	.header__agencylink {
 	margin: 0 15px;
 	}
+	.header__connexion {
+	position: absolute;
+	top: 5px;
+	right: 30px;
+		a {
+		color: #fff;
+		text-decoration: none;
+		color: @theme_light + #444;
+		}
+		a:hover {
+		color: #fff;
+		text-decoration: underline;
+		}
+	}
 	.header__navbar {
 	position: relative;
 	margin-left: 30px;
@@ -81,6 +95,12 @@ background-color: @theme !important;
 	}
 	.header__agencylink {
 	display: none;
+	}
+	.header__connexion {
+	right: auto;
+	left: 5px;
+	top: 10px;
+	max-width: 70px;
 	}
 }
 }

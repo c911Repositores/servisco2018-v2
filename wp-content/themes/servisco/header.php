@@ -20,8 +20,15 @@
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-servisco.svg" alt="SERVISCO REALTY PARTNER OF TOMORROW">
 				</a>
 			</div>
+
 			<div class="header__agencylink">
 				<?php get_template_part('inc/agency-contact-button'); ?>
+			</div>
+
+			<div class="header__connexion">
+				<a href="https://servisco.be/fr/connexion" target="_blank">
+					Espace client
+				</a>
 			</div>
 
 			<?php
