@@ -8,6 +8,14 @@
 		</a>
 	</nav>
 
+	<figure class="article__mainillustration autosize">
+		<?php
+		if(has_post_thumbnail()) {
+			the_post_thumbnail("large"); //thumbnail, medium, large, full, array('700', '600')
+		}
+		?>
+	</figure>
+
 	<h1 class="article__title autosize-m">
 		<?php the_title(); ?>
 	</h1>
