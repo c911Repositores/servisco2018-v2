@@ -148,14 +148,33 @@ $(document).ready(function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+// GET URL PARAMETER (stackoverflow function)
+////////////////////////////////////////////////////////////////////////////////////
+var getUrlParameter = function getUrlParameter(sParam) {
+	var sPageURL = window.location.search.substring(1),
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
+
+	for (i = 0; i < sURLVariables.length; i++) {
+		sParameterName = sURLVariables[i].split('=');
+
+		if (sParameterName[0] === sParam) {
+			return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+		}
+	}
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////
 // SERVICES SCROLL MENU
 ////////////////////////////////////////////////////////////////////////////////////
-function scrollToService(link) {
-	var targetNbr = link.attr("data-js-button-service-number");
-
-	var target = $(".ourservices__item:nth-child(" + targetNbr + ")")
-
+function scrollToService(target) {
 	var decalage = $(".header").height() + 15;
+
+	if($("#wpadminbar").length == 1) {
+		decalage = decalage + $("#wpadminbar").height();
+	}
 
 	var offset = target.offset();
 	offset = offset.top - decalage;
@@ -180,13 +199,25 @@ function activeServiceMenuOnScroll() {
 
 $(document).ready(function() {
 	$("[data-js-button-service-number]").on("click", function() {
-		scrollToService($(this));
+		var targetNbr = $(this).attr("data-js-button-service-number");
+		var target = $(".ourservices__item:nth-child(" + targetNbr + ")");
+		scrollToService(target);
 	});
 
 	if($(".ourservices__item").length > 0) {
 		$(window).scroll(function() {
 			activeServiceMenuOnScroll();
 		});
+	}
+});
+
+$(window).load(function() {
+	// scroller automatiquement si url parameter
+	var serviceLink = getUrlParameter('service');
+	// pas de parameter
+	if(serviceLink) {
+		var target = $("[data-id-service=" + serviceLink + "]");
+		scrollToService(target);
 	}
 });
 

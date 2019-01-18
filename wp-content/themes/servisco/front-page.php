@@ -124,18 +124,20 @@
 		<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
 			<li class="starservices__item">
-				<div class="starservices__icon">
-					<?php
-					$icon_name = get_field('icone_dillustration');
-					get_template_part('svg/animated-' . $icon_name);
-					?>
-				</div>
-				<h3 class="starservices__title">
-					<?php the_title(); ?>
-				</h3>
-				<div class="starservices__text">
-					<?php the_field('text_short'); ?>
-				</div>
+				<a href="<?php echo get_page_link(11) . "?service=" . get_the_ID(); ?>" class="starservices__link">
+					<div class="starservices__icon">
+						<?php
+						$icon_name = get_field('icone_dillustration');
+						get_template_part('svg/animated-' . $icon_name);
+						?>
+					</div>
+					<h3 class="starservices__title">
+						<?php the_title(); ?>
+					</h3>
+					<div class="starservices__text">
+						<?php the_field('text_short'); ?>
+					</div>
+				</a>
 			</li>
 
 		<?php endwhile; ?>

@@ -63,7 +63,7 @@
 		<ul class="ourservices__list">
 			<?php $number_of_service = 1; ?>
 			<?php while ($loop->have_posts() ) : $loop->the_post(); ?>
-				<li class="ourservices__item">
+				<li class="ourservices__item" data-id-service="<?php echo get_the_ID(); ?>">
 					<div class="ourservices__target" id="<?php echo "service" . $number_of_service; ?>"></div>
 
 					<div class="ourservices__icon">
