@@ -10,8 +10,8 @@
     "formflex": "*",
     "js-cookie": "^2.2.0",
     "normalize.css": "*",
-    "sliker": "*",
-    "startpack": "*"
+    "sliker": "^2.1.0",
+    "startpack": "^1.1.1"
   },
   "author": "Zenike",
   "license": "ISC"
