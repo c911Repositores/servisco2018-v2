@@ -7,6 +7,7 @@
 			<i class="fas fa-chevron-left"></i> Liste des partenaires
 		</a>
 	</nav>
+
 	<div class="partnerpost__logo">
 		<?php
 		$image = get_field('logo');
@@ -16,9 +17,11 @@
 		}
 		?>
 	</div>
+
 	<h1 class="partnerpost__title autosize-m">
 		<?php the_title(); ?>
 	</h1>
+
 	<div class="partnerpost__banner">
 		<?php
 		$image = get_field('banner');
@@ -28,8 +31,16 @@
 		}
 		?>
 	</div>
+
 	<div class="partnerpost__content wysiwyg-content autosize-m">
 		<?php the_content(); ?>
+	</div>
+
+	<span class="verticalseparator"></span>
+
+
+	<div class="partnerpost__form basic-form-style autosize-m">
+		<?php echo do_shortcode('[contact-form-7 id="" title="message-vers-partenaire"]'); ?>
 	</div>
 </div>
 
