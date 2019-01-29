@@ -84,6 +84,22 @@
             "placeholder": ""
         },
         {
+            "key": "field_5c502f09bcf49",
+            "label": "Youtube page",
+            "name": "youtube_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5bf2be908b9a1",
             "label": "Intagram page",
             "name": "instagram_link",
@@ -134,25 +150,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5c4086000a950",
-            "label": "Shortcode du module newsletter Mailchimp",
-            "name": "mailchimp_shortcode",
-            "type": "wysiwyg",
-            "instructions": "code dynamique du module mailchimp",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -172,5 +169,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547732546
+    "modified": 1548758821
 }

@@ -33,3 +33,10 @@
 		</a>
 	</li>
 <?php endif; ?>
+<?php if (get_field('youtube_link', 'option')) : ?>
+	<li>
+		<a href="<?php the_field('youtube_link', 'option'); ?>" target="_blank">
+			<i class="fab fa-youtube"></i>
+		</a>
+	</li>
+<?php endif; ?>
