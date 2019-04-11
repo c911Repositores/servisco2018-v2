@@ -71,14 +71,16 @@
 					// parametres dynamiques pour le filtre WP QUERY
 					if($pack_name == "advanced_pack") {
 						$offset = $services_cpt_per_column;
+						$post_per_page = 999;
 					} else {
 						$offset = 0;
+						$post_per_page = $services_cpt_per_column;
 					}
 
 					// paramètres du filtre WP QUERY
 					$args = array(
 						'post_type'			=> 'services',
-						'posts_per_page'	=> $services_cpt_per_column,
+						'posts_per_page'	=> $post_per_page,
 						'offset'			=> $offset
 					);
 
