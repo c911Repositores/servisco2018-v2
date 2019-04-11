@@ -25,7 +25,8 @@
                 "photocamera": "photocamera",
                 "signboard": "signboard",
                 "videocamera": "videocamera",
-                "virtualtour": "virtualtour"
+                "virtualtour": "virtualtour",
+                "homestaging": "homestaging"
             },
             "default_value": [],
             "allow_null": 0,
@@ -162,5 +163,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1547815975
+    "modified": 1554970369
 }
