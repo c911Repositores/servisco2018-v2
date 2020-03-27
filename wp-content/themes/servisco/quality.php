@@ -7,6 +7,8 @@
 <?php get_header(); ?>
 <?php while(have_posts()) : the_post(); ?>
 
+<?php get_template_part('inc/popup-price-mail'); ?>
+
 <div class="cbanner cbanner--quality" data-stp-parallax>
 	<h1 class="cbanner__title">
 		<?php the_field('page_title'); ?>
