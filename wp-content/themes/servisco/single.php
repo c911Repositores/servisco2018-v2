@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php while(have_posts()) : the_post(); ?>
 
+<?php get_template_part('inc/popup-price-mail'); ?>
+
 <div class="article">
 	<nav class="article__back">
 		<a href="<?php echo get_page_link(15); ?>" class="autosize-m">
