@@ -1077,6 +1077,155 @@ display: none;
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+.service {
+position: relative;
+padding-top: 100px;
+	.service__content {
+	position: relative;
+	}
+	.service__icon {
+	text-align: center;
+	margin: 0;
+		svg {
+		max-width: 80px;
+		max-height: 70px;
+		fill: @theme;
+		}
+	}
+	.service__title {
+	font-size: 21px;
+	font-weight: bold;
+	color: @theme;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 15px 0;
+	padding-bottom: 15px;
+	position: relative;
+		&::before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 47%;
+		width: 6%;
+		height: 2px;
+		background-color: @skyblue;
+		}
+	}
+	.service__share {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+		li {
+		display: inline-block;
+			a {
+			font-size: 24px;
+			color: @t;
+			}
+		}
+	}
+	.service__picture {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 45px;
+	justify-content: center;
+	}
+	.service__image {
+	flex-basis: 700px;
+	flex-shrink: 0;
+	background-color: #000;
+		img {
+		object-fit: cover;
+		object-position: center;
+		}
+		iframe {
+		display: block;
+		border: 0;
+		width: 100%;
+		height: 100%;
+		}
+		a:hover {
+			img {
+			opacity: 0.7;
+			}
+		}
+	}
+	.service__playerhover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: fade(#000, 0%);
+	z-index: 2;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+		i {
+		font-size: 100px;
+		color: @skyblue;
+		opacity: 0.7;
+		transition: opacity 0.3s;
+		will-change: opacity;
+		}
+		&:hover {
+		background-color: fade(#000, 50%);
+			i {
+			opacity: 0.9;
+			}
+		}
+	}
+	.service__textcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+	.service__text {
+	font-size: 16px;
+	color: @theme;
+	font-weight: normal;
+	flex-basis: 700px;
+	flex-shrink: 0;
+	}
+@media all and (max-width: 575px) {
+padding-top: 50px;
+}
+@media all and (max-width:1250px) {
+	.service__content {
+	width: 96%;
+	margin: 0 auto;
+	}
+	.service__picture {
+	display: block;
+	margin-top: 30px;
+	}
+	.service__number {
+	font-size: 50px;
+	padding: 10px;
+	background-color: @theme;
+	color: #fff;
+	max-width: 700px;
+	margin: auto;
+	}
+	.service__image {
+	max-width: 700px;
+	margin: auto;
+	}
+	.service__textcontainer {
+	display: block;
+	}
+	.service__text {
+	max-width: 700px;
+	margin: auto;
+	}
+}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 .yourareredirections {
 max-width: 1400px;
 margin: auto;
