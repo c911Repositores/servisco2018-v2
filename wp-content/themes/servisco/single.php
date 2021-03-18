@@ -10,6 +10,14 @@
 		</a>
 	</nav>
 
+	<h1 class="article__title autosize-m">
+		<?php the_title(); ?>
+	</h1>
+
+	<div class="article__date autosize-m mgb30">
+		<?php echo get_the_date('d/m/Y'); ?>
+	</div>
+
 	<figure class="article__mainillustration autosize">
 		<?php
 		if(has_post_thumbnail()) {
@@ -17,14 +25,6 @@
 		}
 		?>
 	</figure>
-
-	<h1 class="article__title autosize-m">
-		<?php the_title(); ?>
-	</h1>
-
-	<div class="article__date autosize-m">
-		<?php echo get_the_date('d/m/Y'); ?>
-	</div>
 
 	<div class="article__content wysiwyg-content autosize-m">
 		<?php the_content(); ?>
@@ -38,7 +38,9 @@
 </div>
 
 <aside class="newslettermodule basic-form-style">
-	<?php the_field('mailchimp_shortcode', 'option'); ?>
+	<div class="autosize-m">
+		<?php the_field('mailchimp_shortcode', 'option'); ?>
+	</div>
 </aside>
 
 <?php endwhile; ?>
