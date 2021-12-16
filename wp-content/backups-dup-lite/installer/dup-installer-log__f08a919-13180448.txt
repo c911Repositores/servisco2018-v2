@@ -1,0 +1,647 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 07:25:42
+* VERSION: 1.4.3
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.4.26                                |7.4.21
+OS__________________: Linux                                 |Darwin
+CREATED_____________: 2021-12-13 18:04:48
+WP VERSION__________: 5.7.1
+DUP VERSION_________: 1.4.3
+DB__________________: 5.7.33
+DB TABLES___________: 30
+DB ROWS_____________: 146,746
+DB FILE SIZE________: 42.67MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.4.21 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.18 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1
+DOC ROOT____________: "/Applications/MAMP/htdocs/servisco2018-2"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/servisco2018-2/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ACTION______: "donothing"
+ARCHIVE ENGINE______: "shellexec_unzip"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "/Applications/MAMP/htdocs/servisco2018-2/20211213_serviscoservicesetmarketing_[HASH]_20211213180448_archive.zip"
+SIZE________________: 1021.66MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+BEFORE EXTRACION ACTIONS
+MAINTENANCE MODE ENABLE
+
+
+START ZIP FILE EXTRACTION SHELLEXEC >>> 
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 07:25:51 - RUNTIME: 9.8495 sec.
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 07:26:59
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+FUNCTION CREATION___: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.34 -- Build Server: 5.7.33
+FILE SIZE:	dup-database__[HASH].sql (30.4MB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Applications/MAMP/htdocs/servisco2018-2/dup-installer/dup-installer-data__[HASH].sql]
+COLLATE FB:	Off
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+DB FUNCTIONS:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	12
+RENAMED TABLES:	0
+QUERIES RAN:	149319
+
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_itsec_bans: (479)
+wp_itsec_distributed_storage: (0)
+wp_itsec_fingerprints: (0)
+wp_itsec_geolocation_cache: (0)
+wp_itsec_lockouts: (806)
+wp_itsec_logs: (3820)
+wp_itsec_mutexes: (0)
+wp_itsec_opaque_tokens: (0)
+wp_itsec_temp: (127108)
+wp_itsec_user_groups: (5)
+wp_links: (0)
+wp_options: (325)
+wp_postmeta: (11410)
+wp_posts: (1714)
+wp_term_relationships: (459)
+wp_term_taxonomy: (43)
+wp_termmeta: (24)
+wp_terms: (43)
+wp_usermeta: (336)
+wp_users: (9)
+wp_wpfm_backup: (0)
+wp_yoast_indexable: (867)
+wp_yoast_indexable_hierarchy: (449)
+wp_yoast_migrations: (21)
+wp_yoast_primary_term: (63)
+wp_yoast_seo_links: (888)
+wp_yoast_seo_meta: (246)
+Removed '170' cache/transient rows
+
+INSERT DATA RUNTIME: 5.3465 sec.
+STEP-2 COMPLETE @ 07:27:05 - RUNTIME: 5.3584 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 07:27:18
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "Servisco - Services et marketing en immobilier"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/data/sites/web/serviscoimmo/www"
+path_new______________: "/Applications/MAMP/htdocs/servisco2018-2"
+siteurl_______________: "http://localhost:8888/servisco2018-2"
+url_old_______________: "https://servisco.immo"
+url_new_______________: "http://localhost:8888/servisco2018-2"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: true
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_bans"___________________________________[ROWS:   479][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_itsec_distributed_storage"____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_fingerprints"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_geolocation_cache"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_lockouts"_______________________________[ROWS:   806][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_itsec_logs"___________________________________[ROWS:  3820][PG:   2][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_itsec_mutexes"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_opaque_tokens"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_itsec_temp"___________________________________[ROWS:127108][PG:  37][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_itsec_user_groups"____________________________[ROWS:     5][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   325][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS: 11410][PG:   4][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:  1714][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:   459][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:    43][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:    24][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:    43][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:   336][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     9][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_wpfm_backup"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_yoast_indexable"______________________________[ROWS:   867][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_yoast_indexable_hierarchy"____________________[ROWS:   449][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_yoast_migrations"_____________________________[ROWS:    21][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_yoast_primary_term"___________________________[ROWS:    63][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_yoast_seo_links"______________________________[ROWS:   888][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+
+EVALUATE TABLE: "wp_yoast_seo_meta"_______________________________[ROWS:   246][PG:   1][SCAN:text columns]
+	SEARCH  1:"/data/sites/web/serviscoimmo/www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  2:"\/data\/sites\/web\/serviscoimmo\/www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  3:"%2Fdata%2Fsites%2Fweb%2Fserviscoimmo%2Fwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  4:"\data\sites\web\serviscoimmo\www" ================> "/Applications/MAMP/htdocs/servisco2018-2"
+	SEARCH  5:"\\data\\sites\\web\\serviscoimmo\\www" ===========> "\/Applications\/MAMP\/htdocs\/servisco2018-2"
+	SEARCH  6:"%5Cdata%5Csites%5Cweb%5Cserviscoimmo%5Cwww" ======> "%2FApplications%2FMAMP%2Fhtdocs%2Fservisco2018-2"
+	SEARCH  7:"//servisco.immo" =================================> "//localhost:8888/servisco2018-2"
+	SEARCH  8:"\/\/servisco.immo" ===============================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH  9:"%2F%2Fservisco.immo" =============================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 10:"//www.servisco.immo" =============================> "//localhost:8888/servisco2018-2"
+	SEARCH 11:"\/\/www.servisco.immo" ===========================> "\/\/localhost:8888\/servisco2018-2"
+	SEARCH 12:"%2F%2Fwww.servisco.immo" =========================> "%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+	SEARCH 13:"https://localhost:8888/servisco2018-2" ===========> "http://localhost:8888/servisco2018-2"
+	SEARCH 14:"https:\/\/localhost:8888\/servisco2018-2" ========> "http:\/\/localhost:8888\/servisco2018-2"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2" => "http%3A%2F%2Flocalhost%3A8888%2Fservisco2018-2"
+--------------------------------------
+SCANNED:	Tables:30 	|	 Rows:149116 	|	 Cells:1101360 
+UPDATED:	Tables:8 	|	 Rows:7449 	|	 Cells:11986 
+ERRORS:		0 
+RUNTIME:	4.831600 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME "** OBSCURED **"
+	UPDATE DB_USER "** OBSCURED **"
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	UPDATE WP_CACHE true
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__[HASH]' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+MAINTENANCE MODE DISABLE
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 07:27:23 - RUNTIME: 4.8684 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================
